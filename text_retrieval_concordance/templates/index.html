@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analysis and Search</title>
+</head>
+<body>
+    <h1>Text Analysis and Search</h1>
+    <form method="POST">
+        <input type="text" name="search" placeholder="Search words...">
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+    <h2>Search Results</h2>
+    <ul>
+    {% for result in results %}
+        <li>{{ result.word }} - Position: {{ result.idx }} - Metadata: {{ result.metadata }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
