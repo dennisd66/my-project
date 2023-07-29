@@ -12,8 +12,8 @@ def index():
     if request.method == 'POST':
         search_string = request.form['search']
         results = text_processing.search_words_in_db(search_string, db_path)
-
-    return render_template('index.html', results=results)
+    template_list = ["templates/index.html"]
+    return render_template(template_list, results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)
