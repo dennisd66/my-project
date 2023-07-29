@@ -1,6 +1,7 @@
 import os
 import sqlite3
-from TextFileParser import TextFileParser, tokenize_text
+from TextFileParser import TextFileParser
+from text_processing import tokenize_text
 
 def parse_txt_file(file_path):
     # Implement your text file parsing logic here
@@ -23,7 +24,7 @@ def load_data_into_database(parsed_data, db_file):
     conn.close()
 
 if __name__ == "__main__":
-    txt_files_directory = "text_retrieval_concordance\songs"
+    txt_files_directory = "text_retrieval_concordance/songs"
     db_file = "concordance.db"
 
     for file_name in os.listdir(txt_files_directory):
