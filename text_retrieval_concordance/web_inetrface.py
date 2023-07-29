@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from TextFileParser import TextFileParser, initialize_database
 import text_processing
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 db_path = initialize_database()
 file_parser = TextFileParser(db_path)
 
