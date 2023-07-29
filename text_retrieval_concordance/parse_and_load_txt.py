@@ -1,13 +1,11 @@
 import os
 import sqlite3
 from TextFileParser import TextFileParser
-from text_processing import tokenize_text
 
 def parse_txt_file(file_path):
-    # Implement your text file parsing logic here
-    # E.g., using TextFileParser
+    print(file_path)
     parser = TextFileParser(file_path)
-    parsed_data = parser.load_text_file(file_path, tokenize_text)
+    parsed_data = parser.load_text_file(file_path)
     return parsed_data
 
 def load_data_into_database(parsed_data, db_file):

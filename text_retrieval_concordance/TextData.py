@@ -40,22 +40,22 @@ class TextData:
 
 
 # Here's an example of how to use the TextData class:
-#   tokens = ['this', 'is', 'an', 'example', 'text', 'for', 'tokenization', 'let', 's', 'see', 'how', 'it', 'works']
-#   metadata_list = [
-#       {"sentence_number": 1}, {"sentence_number": 1}, {"sentence_number": 1},
-#       {"sentence_number": 1}, {"sentence_number": 1}, {"sentence_number": 1},
-#       {"sentence_number": 1}, {"sentence_number": 2}, {"sentence_number": 2},
-#       {"sentence_number": 2}, {"sentence_number": 2}, {"sentence_number": 2},
-#       {"sentence_number": 2}
-#   ]
-#   text_data = TextData(tokens, metadata_list)
-#
+tokens = ['this', 'is', 'an', 'example', 'text', 'for', 'tokenization', 'let', 's', 'see', 'how', 'it', 'works']
+metadata_list = [
+{"sentence_number": 1}, {"sentence_number": 1}, {"sentence_number": 1},
+{"sentence_number": 1}, {"sentence_number": 1}, {"sentence_number": 1},
+{"sentence_number": 1}, {"sentence_number": 2}, {"sentence_number": 2},
+{"sentence_number": 2}, {"sentence_number": 2}, {"sentence_number": 2},
+{"sentence_number": 2}
+]
+text_data = TextData(tokens, metadata_list)
+
 # Search for a word
-#   query = "example"
-#   search_results = text_data.search(query)
-#   print(f"Search results for '{query}': {search_results}")
-#
+query = "example"
+search_results = text_data.search(query)
+print(f"Search results for '{query}': {search_results}")
+
 # Filter search results based on metadata
-#   criteria = {"sentence_number": 2}
-#   filtered_results = text_data.filter_search_results(search_results, criteria)
-#   print(f"Filtered results based on criteria {criteria}: {filtered_results}")
+criteria = {"sentence_number": 2}
+filtered_results = text_data.filter_search_results(search_results, criteria)
+print(f"Filtered results based on criteria {criteria}: {filtered_results}")
